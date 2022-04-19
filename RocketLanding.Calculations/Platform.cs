@@ -46,6 +46,12 @@ namespace RocketLanding.Calculations
             if (Landings.Count == 0)
                 return false;
 
+            // The code below can potentially check -1,-1 in case of 0,0 rocket.
+            // I could have ignored the cells which are out of bounds,
+            // but I am not checking it twice because of two reasons:
+            // 1. IsOutOfPlatform() already checks it
+            // 2. There isn't much performance difference between this check and checking the list.Contains
+
             for (int i = rocket.X - 1; i <= rocket.X + 1; i++)
             {
                 for (int j = rocket.Y - 1; j <= rocket.Y + 1; j++)
