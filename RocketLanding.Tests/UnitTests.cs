@@ -17,9 +17,9 @@ namespace RocketLanding.Tests
             field = new Field(100, 100, platform);
 
             //Act
-            var result1 = field.QueryRocketLanding(new Point(0, 0));
-            var result2 = field.QueryRocketLanding(new Point(9, 9));
-            var result3 = field.QueryRocketLanding(new Point(10, 10));
+            var result1 = field.QueryRocketLanding(new Point(5, 5));
+            var result2 = field.QueryRocketLanding(new Point(14, 14));
+            var result3 = field.QueryRocketLanding(new Point(15, 15));
 
             //Assert
             Assert.True(result1 == LandingStatus.Ok);
@@ -47,7 +47,7 @@ namespace RocketLanding.Tests
             field = new Field(100, 100, platform);
 
             //Act
-            var result1 = field.QueryRocketLanding(new Point(3, 3));
+            var result1 = field.QueryRocketLanding(new Point(8, 8));
 
             //Assert
             Assert.True(result1 == LandingStatus.Ok);
@@ -60,8 +60,8 @@ namespace RocketLanding.Tests
             field = new Field(100, 100, platform);
 
             //Act
-            var result1 = field.QueryRocketLanding(new Point(3, 3));
-            var result2 = field.QueryRocketLanding(new Point(8, 5));
+            var result1 = field.QueryRocketLanding(new Point(8, 8));
+            var result2 = field.QueryRocketLanding(new Point(13, 10));
 
             //Assert
             Assert.True(result1 == LandingStatus.Ok);
@@ -75,8 +75,8 @@ namespace RocketLanding.Tests
             field = new Field(100, 100, platform);
 
             //Act
-            var result1 = field.QueryRocketLanding(new Point(3, 3));
-            var result2 = field.QueryRocketLanding(new Point(3, 3));
+            var result1 = field.QueryRocketLanding(new Point(8, 8));
+            var result2 = field.QueryRocketLanding(new Point(8, 8));
 
             //Assert
             Assert.True(result1 == LandingStatus.Ok);
@@ -90,8 +90,8 @@ namespace RocketLanding.Tests
             field = new Field(100, 100, platform);
 
             //Act
-            var result1 = field.QueryRocketLanding(new Point(3, 3));
-            var result2 = field.QueryRocketLanding(new Point(4, 3));
+            var result1 = field.QueryRocketLanding(new Point(8, 8));
+            var result2 = field.QueryRocketLanding(new Point(9, 8));
 
             //Assert
             Assert.True(result1 == LandingStatus.Ok);

@@ -9,7 +9,7 @@ namespace RocketLanding.Calculations
     {
         public int HorizontalCells { get; private set; } = 10;
         public int VerticalCells { get; private set; } = 10;
-        public Point Start { get; private set; } = new Point(0, 0);
+        public Point Start { get; private set; } = new Point(5, 5);
 
         /// <summary>
         /// List of cells in which rockets have already landed
