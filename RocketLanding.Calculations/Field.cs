@@ -8,13 +8,13 @@ namespace RocketLanding.Calculations
     {
         public int HorizontalCells { get; }
         public int VerticalCells { get; }
-        public IPlatform Platform { get; }
+        private IPlatform platform { get; }
 
         public Field(int x, int y, IPlatform platform)
         {
             HorizontalCells = x;
             VerticalCells = y;
-            Platform = platform;
+            this.platform = platform;
         }
 
         public LandingStatus QueryRocketLanding(Point rocket)
@@ -25,7 +25,7 @@ namespace RocketLanding.Calculations
                 throw new ArgumentOutOfRangeException("Rocket is out of field!");
             }
 
-            return 
+            return platform.QueryRocketLanding(rocket);
         }
     }
 }
