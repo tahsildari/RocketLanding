@@ -32,6 +32,7 @@ namespace RocketLanding.Calculations
             if (CellIsAlreadyOccupiedOrAdjacent(rocket))
                 return LandingStatus.Clash;
 
+            // I assume rocket lands after successful query for the sake of test simplicity
             Land(rocket);
             return LandingStatus.Ok;
         }
